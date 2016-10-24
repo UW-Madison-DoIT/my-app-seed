@@ -61,3 +61,5 @@ of the code base. You would see other modules that are siblings of the war modul
 * impl
 * security
 * integration
+
+For even better encapsulation and decoupling, you could consider factoring these modules into their own repositories, even independently semantically versioned.
