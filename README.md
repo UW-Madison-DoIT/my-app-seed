@@ -61,5 +61,3 @@ of the code base. You would see other modules that are siblings of the war modul
 * impl
 * security
 * integration
-
-If your application won't have these things, you probably should consider a portlet instead.
