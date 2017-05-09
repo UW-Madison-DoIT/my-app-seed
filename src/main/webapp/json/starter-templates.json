@@ -1,0 +1,164 @@
+{
+  "templates": [
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 5,
+          "type": "basic",
+          "widgetType": "basic",
+          "title": "Basic Widget",
+          "hasWidgetURL": false,
+          "description": "This default widget is super easy to set up!",
+          "mdIcon": "widgets",
+          "widgetConfig": {
+            "launchText": "Launch app"
+          },
+          "url": "//www.example.com"
+        }
+      }
+    },
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 4,
+          "type": "widget-creator",
+          "widgetType": "custom",
+          "title": "Custom",
+          "hasWidgetURL": false,
+          "description": "This super cool portlet can change lives.",
+          "widgetConfig": {},
+          "widgetTemplate": "<h1>Hello</h1>",
+          "jsonSample": {},
+          "url": "//www.example.com"
+        }
+      }
+    },
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 1,
+          "type": "search-with-links",
+          "widgetType": "search-with-links",
+          "title": "Search with Links",
+          "jsonSample": false,
+          "url": "//www.example.com",
+          "widgetConfig": {
+            "actionURL": "https://rprg.wisc.edu/search/",
+            "actionTarget": "_blank",
+            "actionParameter": "q",
+            "launchText": "Launch app",
+            "links": [
+              {
+                "title": "Get started",
+                "href": "https://rprg.wisc.edu/phases/initiate/",
+                "icon": "fa-map-o",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              {
+                "title": "Resources",
+                "href": "https://rprg.wisc.edu/category/resource/",
+                "icon": "fa-th-list",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              }
+            ]
+          },
+          "hasWidgetURL": false
+        }
+      }
+    },
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 3,
+          "url": "//www.example.com",
+          "type": "list-of-links",
+          "widgetType": "list-of-links",
+          "title": "List of Links",
+          "jsonSample": false,
+          "hasWidgetURL": false,
+          "widgetConfig": {
+            "launchText": "See all",
+            "additionalText": "Additional Text",
+            "links": [
+              {
+                "title": "The Google",
+                "href": "http://www.google.com",
+                "icon": "fa-google",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              {
+                "title": "Bing",
+                "href": "http://www.bing.com",
+                "icon": "fa-bed",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              }
+            ]
+          },
+          "description": "A simple list of links"
+        }
+      }
+    },
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 2,
+          "url": "//www.example.com",
+          "type": "rss",
+          "widgetType": "rss",
+          "title": "RSS Widget",
+          "jsonSample": false,
+          "widgetConfig": {
+            "lim": 6,
+            "target": "",
+            "showdate": true,
+            "titleLim": 40,
+            "dateFormat": "MM-dd-yyyy",
+            "showShowing": true
+          },
+          "hasWidgetURL": true,
+          "widgetURL": ""
+        }
+      }
+    },
+    {
+      "entry": {
+        "layoutObject": {
+          "id": 6,
+          "url": "//www.example.com",
+          "type": "action-items",
+          "widgetType": "action-items",
+          "title": "Action Items",
+          "description": "A list of items that need your attention",
+          "widgetConfig": {
+            "launchText": "See all items",
+            "actionItems": [
+              {
+                "textSingular": "thing in empty feed.",
+                "textPlural": "things in empty feed.",
+                "feedUrl": "json/sample-action-none.json",
+                "actionUrl": "//www.example.com/#second-link"
+              },
+              {
+                "textSingular": "item needs your attention.",
+                "textPlural": "items need your attention.",
+                "feedUrl": "json/sample-action-items.json",
+                "actionUrl": "//www.example.com/#first-link"
+              },
+              {
+                "textSingular": "item needs your approval.",
+                "textPlural": "items need your approval.",
+                "feedUrl": "json/sample-action-item.json",
+                "actionUrl": "//www.example.com/#second-link"
+              }
+            ]
+          },
+          "hasWidgetURL": false
+        }
+      }
+    }
+  ]
+}
