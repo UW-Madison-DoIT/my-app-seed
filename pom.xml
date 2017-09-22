@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.wisc.my.app</groupId>
-  <artifactId>widget-creator</artifactId>
+  <artifactId>my-app-seed</artifactId>
   <version>1.0.1-SNAPSHOT</version>
-  <name>Widget Creator War</name>
-  <description>Web application for uportal-app-framework widget creator.</description>
+  <name>My Seed App War</name>
+  <description>Web application for developing applications with uportal-app-framework.</description>
   <packaging>war</packaging>
   <scm>
-    <connection>scm:git:git@github.com:UW-Madison-DoIT/widget-creator.git</connection>
-    <developerConnection>scm:git:git@github.com:UW-Madison-DoIT/widget-creator.git</developerConnection>
-    <url>https://github.com/UW-Madison-DoIT/widget-creator</url>
+    <connection>scm:git:git@github.com:UW-Madison-DoIT/my-app-seed.git</connection>
+    <developerConnection>scm:git:git@github.com:UW-Madison-DoIT/my-app-seed.git</developerConnection>
+    <url>https://github.com/UW-Madison-DoIT/my-app-seed</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -61,7 +61,7 @@
   </dependencies>
 
   <build>
-    <finalName>widget-creator</finalName>
+    <finalName>my-app-seed</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>

@@ -9,21 +9,14 @@ define(['angular'], function(angular) {
         'loginOnLoad': false,
       },
       'NAMES': {
-        'title': 'Widget Creator',
-        'fname': 'widget-creator',
+        'title': 'My App Seed',
+        'fname': 'my-app-seed',
       },
       'SERVICE_LOC': {
         'kvURL': null,
         'groupURL': 'staticFeeds/groups.json',
         'sessionInfo': 'staticFeeds/guest-session.json',
         'shibbolethSessionURL': 'staticFeeds/Shibboleth.sso/Session.json',
-        'templates': 'json/starter-templates',
-        'widgetApi': {
-          // For local testing, change to 'staticFeeds/'
-          'entry': 'data:application/json;base64,',
-          'entrySuffix': '',
-          'entries': null,
-        },
       },
       'MISC_URLS': {
         'rootURL': 'https://my.wisc.edu',
