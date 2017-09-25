@@ -1,7 +1,8 @@
 My App Seed is a demo app used to help developers learn to make
-[uPortal-App-Framework applications](https://github.com/UW-Madison-DoIT/uw-frame).
+[uPortal-app-framework applications](https://github.com/uPortal-Project/uportal-app-framework).
 
 # How to run locally
 ```bash
-mvn jetty:run
+npm install
+mvn clean package install jetty:run-war
 ```

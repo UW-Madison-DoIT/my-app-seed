@@ -2,45 +2,43 @@
 /* eslint-env node */
 /* global inject readJSON */
 define(['angular-mocks', 'my-app'], function() {
-    describe('WidgetCreatorController', function() {
+    describe('HomeViewController', function() {
         var scope;
         var deferred;
         var service;
-        var templateURL;
-        var templates;
+        var linksURL;
+        var links;
+
 
         beforeEach(function() {
           module('my-app');
         });
 
         beforeEach(inject(function(
-          _$controller_, _$q_, _$rootScope_, _$templateCache_,
-          _widgetCreatorService_, _SERVICE_LOC_) {
+          _$controller_, _$q_, _$rootScope_,
+          _resourcesService_, _SERVICE_LOC_) {
           scope = _$rootScope_.$new();
-          templateURL = _SERVICE_LOC_.templates + '.json';
-          templates = readJSON(templateURL).templates;
-          spyOn(_$templateCache_, 'get').and.callFake(function(path) {
-            return '<div></div>';
-          });
-          service = _widgetCreatorService_;
+          linksURL = _SERVICE_LOC_.helpfulLinks + '.json';
+          links = readJSON(linksURL).links;
+
+          service = _resourcesService_;
           deferred = _$q_.defer();
-          spyOn(service, 'getStarterTemplates')
-          .and.returnValue(deferred.promise);
-          _$controller_('WidgetCreatorController', {
+          spyOn(service, 'getHelpfulLinks')
+            .and.returnValue(deferred.promise);
+
+          _$controller_('HomeViewController', {
             '$scope': scope,
-            'widgetCreatorService': service,
+            'resourcesService': service,
           });
-          deferred.resolve(templates);
+
+          deferred.resolve(links);
           scope.$apply();
         }));
 
-        it('should set selectedTemplate in scope', function() {
-          expect(scope.selectedTemplate).toBeTruthy();
-          expect(scope.selectedTemplate).not.toEqual({});
-        });
-
-        it('should set the preview widget configuration', function() {
-          expect(scope.preview).toBeTruthy();
+        it('should set links in scope', function() {
+          // Test vm.links
+          // expect(vm.links).toBeTruthy();
+          // expect(vm.links).not.toEqual([]);
         });
     });
 });
