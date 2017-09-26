@@ -5,7 +5,7 @@ define(['angular'], function(angular) {
     .factory('resourcesService', ['$log', '$http', 'SERVICE_LOC',
       function($log, $http, SERVICE_LOC) {
         var getHelpfulLinks = function() {
-          return $http.get(SERVICE_LOC.helpfulLinks)
+          return $http.get(SERVICE_LOC.helpfulLinks + '.json')
             .then(function(result) {
               return result.data;
             })
