@@ -3,42 +3,49 @@
 /* global inject readJSON */
 define(['angular-mocks', 'my-app'], function() {
     describe('HomeViewController', function() {
-        var scope;
-        var deferred;
-        var service;
-        var linksURL;
-        var links;
+      // Test variables
+      var $controller;
+      var vm;
+      var scope;
+      var service;
+      var linksURL;
+      var linksJSON;
+      var deferred;
 
+      // Inject the application module
+      beforeEach(function() {
+        module('my-app');
+      });
 
-        beforeEach(function() {
-          module('my-app');
+      beforeEach(inject(function(_$controller_, _$rootScope_, _$q_,
+                                 _resourcesService_, _SERVICE_LOC_) {
+        $controller = _$controller_;
+        scope = _$rootScope_.$new();
+        service = _resourcesService_;
+        linksURL = _SERVICE_LOC_.helpfulLinks + '.json';
+        linksJSON = readJSON(linksURL);
+        deferred = _$q_.defer();
+
+        // Intercept service request and pass deferred promise
+        spyOn(service, 'getHelpfulLinks')
+          .and.returnValue(deferred.promise);
+
+        vm = $controller('HomeViewController', {
+          '$scope': scope,
+          'resourcesService': service,
         });
 
-        beforeEach(inject(function(
-          _$controller_, _$q_, _$rootScope_,
-          _resourcesService_, _SERVICE_LOC_) {
-          scope = _$rootScope_.$new();
-          linksURL = _SERVICE_LOC_.helpfulLinks + '.json';
-          links = readJSON(linksURL).links;
+        // When promise resolution is triggered, pass back the
+        // helpful links
+        deferred.resolve(linksJSON);
+        scope.$apply();
+      }));
 
-          service = _resourcesService_;
-          deferred = _$q_.defer();
-          spyOn(service, 'getHelpfulLinks')
-            .and.returnValue(deferred.promise);
-
-          _$controller_('HomeViewController', {
-            '$scope': scope,
-            'resourcesService': service,
-          });
-
-          deferred.resolve(links);
-          scope.$apply();
-        }));
-
-        it('should set links in scope', function() {
-          // Test vm.links
-          // expect(vm.links).toBeTruthy();
-          // expect(vm.links).not.toEqual([]);
+      describe('initialize controller', function() {
+        it('should set resource links in scope', function() {
+          expect(vm.links).toBeTruthy();
+          expect(vm.links).not.toEqual([]);
         });
+      });
     });
 });

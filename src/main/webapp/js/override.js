@@ -17,7 +17,7 @@ define(['angular'], function(angular) {
         'groupURL': 'staticFeeds/groups.json',
         'sessionInfo': 'staticFeeds/guest-session.json',
         'shibbolethSessionURL': 'staticFeeds/Shibboleth.sso/Session.json',
-        'helpfulLinks': 'json/helpful-links.json',
+        'helpfulLinks': 'json/helpful-links',
       },
       'NAMES': {
         'title': 'My App Seed',
