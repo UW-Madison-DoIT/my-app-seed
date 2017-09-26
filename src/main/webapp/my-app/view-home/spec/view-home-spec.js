@@ -17,14 +17,19 @@ define(['angular-mocks', 'my-app'], function() {
         module('my-app');
       });
 
-      beforeEach(inject(function(_$controller_, _$rootScope_, _$q_,
-                                 _resourcesService_, _SERVICE_LOC_) {
+      beforeEach(inject(function(_$controller_, _$rootScope_, _$templateCache_,
+                                 _$q_, _resourcesService_, _SERVICE_LOC_) {
         $controller = _$controller_;
         scope = _$rootScope_.$new();
         service = _resourcesService_;
         linksURL = _SERVICE_LOC_.helpfulLinks + '.json';
         linksJSON = readJSON(linksURL);
         deferred = _$q_.defer();
+
+        // Avoid 'unexpected GET' failures when getting HTML templates
+        spyOn(_$templateCache_, 'get').and.callFake(function(path) {
+          return '<div></div>';
+        });
 
         // Intercept service request and pass deferred promise
         spyOn(service, 'getHelpfulLinks')
