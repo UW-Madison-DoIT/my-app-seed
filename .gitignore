@@ -9,5 +9,3 @@ node_modules
 test_out
 docs/Gemfile.lock
 docs/_site/
-docs/_layouts/
-docs/_includes/
