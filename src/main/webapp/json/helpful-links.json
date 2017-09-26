@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "label": "uPortal-app-framework documentation",
+      "description": "MyUW apps are built upon the uPortal-app-framework. Its documentation includes best practices and implementation info about project configuration, access control, in-app messaging, and more.",
+      "url": "http://uportal-project.github.io/uportal-app-framework/"
+    },
+    {
+      "label": "AngularJS Material documentation",
+      "description": "All of the CSS classes and directives in AngularJS Material are available for you to use.",
+      "url": "https://material.angularjs.org/latest/layout/introduction"
+    },
+    {
+      "label": "AngularJS Material layout directives",
+      "description": "Using these directives can help you prototype faster by eliminating dependence on additional third-party libraries and custom CSS.",
+      "url": "https://material.angularjs.org/latest/layout/introduction"
+    },
+    {
+      "label": "Material icons",
+      "description": "See all the Material Design icons at your disposal.",
+      "url": "https://material.io/icons"
+    },
+    {
+      "label": "John Papa angularJS style guide",
+      "description": "Though we do not strictly conform to John Papa's code standards, the uPortal-app-framework team strives to do so whenever possible.",
+      "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
+    }
+  ]
+}

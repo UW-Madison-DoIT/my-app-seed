@@ -1,0 +1,10 @@
+<md-list flex>
+  <md-subheader class="md-no-sticky">Other helpful resources</md-subheader>
+  <md-divider></md-divider>
+  <md-list-item ng-repeat="link in vm.links" class="md-2-line" ng-click="vm.goToUrl(link.url)">
+    <div class="md-list-item-text" layout="column">
+      <h3>{{ link.label }}</h3>
+      <p>{{ link.description }}</p>
+    </div>
+  </md-list-item>
+</md-list>
