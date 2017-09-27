@@ -12,7 +12,7 @@ define(['angular'], function(angular) {
         'optionsTemplateURL': 'my-app/templates/example-options.html',
       },
       'SERVICE_LOC': {
-        'messagesURL': '', // Delete to get portal-wide notifications
+        'messagesURL': '', // '/web/staticFeeds/messages.json',
         'kvURL': null,
         'groupURL': 'staticFeeds/groups.json',
         'sessionInfo': 'staticFeeds/guest-session.json',
