@@ -1,5 +1,5 @@
 define(['angular'], function(angular) {
-  // see https://uw-madison-doit.github.io/uw-frame/configuration.html for howto
+  // see http://uportal-project.github.io/uportal-app-framework/configuration.html
   return angular.module('override', [])
     .constant('OVERRIDE', {
       'APP_FLAGS': {
@@ -12,7 +12,7 @@ define(['angular'], function(angular) {
         'optionsTemplateURL': 'my-app/templates/example-options.html',
       },
       'SERVICE_LOC': {
-        'messagesURL': '', // Delete to get portal-wide notifications
+        'messagesURL': '', // '/web/staticFeeds/messages.json',
         'kvURL': null,
         'groupURL': 'staticFeeds/groups.json',
         'sessionInfo': 'staticFeeds/guest-session.json',

@@ -5,6 +5,7 @@ define([
     'portal/settings/routes', // example pulling in portal module routes
     'portal/about/route', // Nice about page for your application
     'portal/main/routes',
+    'portal/messages/routes', // Notifications and features pages
     'portal',
     'app-config',
     'ngRoute',
@@ -19,7 +20,8 @@ define([
     homeRoutes,
     settingsRoutes,
     aboutRoute,
-    mainRoutes
+    mainRoutes,
+    messagesRoutes
   ) { // notice each route file is now an object
     return angular.module('my-app', [
         'app-config',
@@ -39,8 +41,12 @@ define([
           .when('/home', homeRoutes.home)
           .when('/settings', settingsRoutes.betaSettings)
           .when('/user-settings', settingsRoutes.userSettings)
+          .when('/notifications', messagesRoutes.notifications)
+          .when('/features', messagesRoutes.announcements)
           .when('/about', aboutRoute)
           .when('/access-denied', mainRoutes.accessDenied)
+          .when('/server-error', mainRoutes.serverError)
+          .when('/sorry-safari', mainRoutes.storageError)
           .otherwise({'redirectTo': '/home'});
     }]);
 });
