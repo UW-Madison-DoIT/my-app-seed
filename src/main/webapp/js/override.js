@@ -15,13 +15,14 @@ define(['angular'], function(angular) {
         'messagesURL': '', // '/web/staticFeeds/messages.json',
         'kvURL': null,
         'groupURL': 'staticFeeds/groups.json',
-        'sessionInfo': 'staticFeeds/guest-session.json',
+        'sessionInfo': 'staticFeeds/session.json', // demo session
         'shibbolethSessionURL': 'staticFeeds/Shibboleth.sso/Session.json',
         'helpfulLinks': 'json/helpful-links',
       },
       'NAMES': {
         'title': 'My App Seed',
         'fname': 'my-app-seed',
+        'guestUserName': 'guest',
       },
       'MISC_URLS': {
         'rootURL': 'https://my.wisc.edu',
