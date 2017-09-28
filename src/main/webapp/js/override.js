@@ -1,5 +1,5 @@
 define(['angular'], function(angular) {
-  // see https://uw-madison-doit.github.io/uw-frame/configuration.html for howto
+  // see http://uportal-project.github.io/uportal-app-framework/configuration.html
   return angular.module('override', [])
     .constant('OVERRIDE', {
       'APP_FLAGS': {
