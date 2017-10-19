@@ -3,13 +3,20 @@ define(['angular'], function(angular) {
   return angular.module('override', [])
     .constant('OVERRIDE', {
       'APP_FLAGS': {
-        'defaultTheme': 'uw-madison',
+        'defaultTheme': 'uwMadison',
         'showSearch': false,
         'isWeb': false,
         'loginOnLoad': false,
       },
       'APP_OPTIONS': {
         'optionsTemplateURL': 'my-app/templates/example-options.html',
+        'appMenuItems': [
+          {
+            'label': 'About',
+            'icon': 'info',
+            'url': '/about',
+          },
+        ],
       },
       'SERVICE_LOC': {
         'messagesURL': '', // '/web/staticFeeds/messages.json',
