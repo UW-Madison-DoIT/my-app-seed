@@ -10,6 +10,13 @@ define(['angular'], function(angular) {
       },
       'APP_OPTIONS': {
         'optionsTemplateURL': 'my-app/templates/example-options.html',
+        'appMenuItems': [
+          {
+            'label': 'About',
+            'icon': 'info',
+            'url': '/about',
+          },
+        ],
       },
       'SERVICE_LOC': {
         'messagesURL': '', // '/web/staticFeeds/messages.json',
