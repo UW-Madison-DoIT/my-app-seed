@@ -16,14 +16,14 @@
       "url": "https://material.angularjs.org/latest/layout/introduction"
     },
     {
-      "label": "Material icons",
-      "description": "See all the Material Design icons at your disposal.",
-      "url": "https://material.io/icons"
-    },
-    {
       "label": "John Papa angularJS style guide",
       "description": "Though we do not strictly conform to John Papa's code standards, the uPortal-app-framework team strives to do so whenever possible.",
       "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
+    },
+    {
+      "label": "Material icons",
+      "description": "See all the Material Design icons at your disposal.",
+      "url": "https://material.io/icons"
     }
   ]
 }
